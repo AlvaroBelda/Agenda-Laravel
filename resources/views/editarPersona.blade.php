@@ -10,6 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5">
 
                 <form method="POST" action="/persona/{{ $persona->id }}">
+                    <!-- <label><input type="checkbox" name="estrellaPersona" value="" {{$persona->estrellaPersona == 1 ? 'checked' : ''}}> Favorito</label> -->
 
                     <div class="form-group">
                         <textarea name="estrellaPersona" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white">{{$persona->estrellaPersona}}</textarea>

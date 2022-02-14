@@ -20,7 +20,7 @@ class PersonasController extends Controller
     public function crear(Request $request)
     {
         $this->validate($request, [
-            'estrellaPersona'   => 'required',
+            'estrellaPersona'   => 'boolean',
             'nombrePersona'     => 'required',
             'apellidoPersona'   => 'required',
             'telefonoPersona'   => 'required',
@@ -58,7 +58,7 @@ class PersonasController extends Controller
         else
         {
             $this->validate($request, [
-                'estrellaPersona'   => 'required',
+                'estrellaPersona'   => 'boolean',
                 'nombrePersona'     => 'required',
                 'apellidoPersona'   => 'required',
                 'telefonoPersona'   => 'required',
@@ -85,4 +85,6 @@ class PersonasController extends Controller
         $persona->save();
         return redirect('/gestionPersonas');
     }
+
+    //dd($request->all());  Dentro de una función es parecido a debuger
 }

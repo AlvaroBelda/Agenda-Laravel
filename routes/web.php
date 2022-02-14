@@ -32,5 +32,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::post ('/persona',                [PersonasController::class, 'crear']);
     Route::get  ('/persona/{persona}',      [PersonasController::class, 'editar']);
     Route::post ('/persona/{persona}',      [PersonasController::class, 'modificar']);
-    Route::post ('/persona/{persona}',      [PersonasController::class, 'modificarEstrella']);
+    //Route::post ('/persona/{persona}',      [PersonasController::class, 'modificarEstrella']); // Futuro para ajax?
 });
